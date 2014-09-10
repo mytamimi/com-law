@@ -18,7 +18,7 @@
 
 'use strict';
 
-var comLawApp = angular.module('comLawApp', [
+var comLawApp = angular.module('com-law', [
     'ngRoute',
     'comLawControllers',
     'comLawServices'
