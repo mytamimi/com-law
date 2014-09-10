@@ -15,18 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 'use strict';
 
-var app = angular.module('com-law', [
-    'ngRoute',
-    'clControllers',
-    'clServices'
-]);
+var ctrl = angular.module('clControllers', []);
 
-//app.config(['$routeProvider', function($routeProvider) {
-//        $routeProvider.when('/main', {
-//            templateURL: 'partials/main.html',
-//            controller: 'MainCtrl'
-//        }).otherwise({redirectTo: '/main'});
-//    }]);
+

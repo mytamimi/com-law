@@ -18,15 +18,4 @@
 
 'use strict';
 
-var app = angular.module('com-law', [
-    'ngRoute',
-    'clControllers',
-    'clServices'
-]);
-
-//app.config(['$routeProvider', function($routeProvider) {
-//        $routeProvider.when('/main', {
-//            templateURL: 'partials/main.html',
-//            controller: 'MainCtrl'
-//        }).otherwise({redirectTo: '/main'});
-//    }]);
+var svc = angular.module('clServices', []);
