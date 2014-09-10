@@ -18,13 +18,13 @@
 
 'use strict';
 
-var comLawApp = angular.module('com-law', [
+var app = angular.module('com-law', [
     'ngRoute',
-    'comLawControllers',
-    'comLawServices'
+    'clControllers',
+    'clServices'
 ]);
 
-comLawApp.config(['$routeProvider', function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/main', {
             templateURL: 'partials/main.html',
             controller: 'MainCtrl'
