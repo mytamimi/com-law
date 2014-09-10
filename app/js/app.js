@@ -17,16 +17,17 @@
 
 
 'use strict';
+(function() {
+    var app = angular.module('comlaw', [
+        'ngRoute',
+        'clControllers',
+        'clServices'
+    ]);
 
-var app = angular.module('com-law', [
-    'ngRoute',
-    'clControllers',
-    'clServices'
-]);
-
-//app.config(['$routeProvider', function($routeProvider) {
-//        $routeProvider.when('/main', {
-//            templateURL: 'partials/main.html',
-//            controller: 'MainCtrl'
-//        }).otherwise({redirectTo: '/main'});
-//    }]);
+    app.config(['$routeProvider', function($routeProvider) {
+            $routeProvider.when('/', {
+                templateUrl: 'partials/main.html',
+                controller: 'MainCtrl'
+            }).otherwise({redirectTo: '/'});
+        }]);
+})();

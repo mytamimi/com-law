@@ -15,8 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 'use strict';
 
 var ctrl = angular.module('clControllers', []);
 
-
+ctrl.controller('MainCtrl', ['$scope', function($scope) {
+        $scope.data = {text: "Hello World"};
+    }]);
