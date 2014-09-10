@@ -25,9 +25,14 @@
     ]);
 
     app.config(['$routeProvider', function($routeProvider) {
-            $routeProvider.when('/', {
-                templateUrl: 'partials/main.html',
-                controller: 'MainCtrl'
-            }).otherwise({redirectTo: '/'});
+            $routeProvider.
+                    when('/', {
+                        templateUrl: 'partials/main.html',
+                        controller: 'MainCtrl'
+                    }).
+                    when('/lecture/:lectureId', {
+                        templateUrl: 'partials/lecture-details.html',
+                        controller: 'LectureCtrl'
+                    }).otherwise({redirectTo: '/'});
         }]);
 })();

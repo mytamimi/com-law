@@ -20,6 +20,11 @@
 
 var ctrl = angular.module('clControllers', []);
 
-ctrl.controller('MainCtrl', ['$scope', function($scope) {
-        $scope.data = {text: "Hello World"};
+ctrl.controller('MainCtrl', ['$scope', 'Lecture', function($scope, Lecture) {
+        $scope.lectures = Lecture.query();
+    }]);
+
+ctrl.controller('LectureCtrl', ['$scope', '$routeParams', 'Lecture',
+    function($scope, $routeParams, Lecture) {
+        $scope.lecture = Lecture.get({lectureId: $routeParams.lectureId});
     }]);

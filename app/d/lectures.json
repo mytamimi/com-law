@@ -1,16 +1,14 @@
-{
-    "lectures": [
-        {
-            "id": 1,
-            "title": "Lecture 1"
-        },
-        {
-            "id": 2,
-            "title": "Lecture 2"
-        },
-        {
-            "id": 3,
-            "title": "Lecture 3"
-        }
-    ]
-}
+[
+    {
+        "id": "intro",
+        "title": "محاضرة 1"
+    },
+    {
+        "id": "deep",
+        "title": "محاضرة 2"
+    },
+    {
+        "id": "conc",
+        "title": "محاضرة 3"
+    }
+]
