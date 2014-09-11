@@ -20,6 +20,7 @@
 (function() {
     var app = angular.module('comlaw', [
         'ngRoute',
+        'ui.bootstrap',
         'clControllers',
         'clServices'
     ]);

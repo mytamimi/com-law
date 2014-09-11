@@ -1,0 +1,30 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.centered{
+    text-align: center;
+}
+
+.strong{
+    font-weight: bold;
+}
+
+span.status{
+    font-size: 1.25em;
+}
+
+span.status.done{
+    color: #67b168;
+}
+
+span.status.pending{
+    color: #7a43b6;
+}
+
+span.status.next{
+    color: #d2322d;
+}

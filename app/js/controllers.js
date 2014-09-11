@@ -21,7 +21,25 @@
 var ctrl = angular.module('clControllers', []);
 
 ctrl.controller('MainCtrl', ['$scope', 'Lecture', function($scope, Lecture) {
-        $scope.lectures = Lecture.query();
+        $scope.lectures = Lecture.query(function() {
+            var i = 0;
+            while ($scope.lectures[i].done) {
+                i++;
+            }
+            $scope.i = i;
+        });
+        
+        $scope.isNext = function(l){
+            return (l === $scope.lectures[$scope.i]) && (!l.done);
+        };
+        
+        $scope.isLater = function(l){
+            return (l !== $scope.lectures[$scope.i]) && (!l.done);
+        };
+        
+        $scope.isDone = function(l){
+            return l.done;
+        };
     }]);
 
 ctrl.controller('LectureCtrl', ['$scope', '$routeParams', 'Lecture',
