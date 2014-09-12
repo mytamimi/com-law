@@ -23,9 +23,9 @@ fltr.filter('status', ['$sce', function ($sce) {
         return function (input) {
             var output = '';
             if (input) {
-                output = '<span class="status done"><i class="fa fa-check-circle fa-lg"></i></span>';
+                output = '<span class="status done"><i class="fa fa-check-circle fa-3x"></i></span>';
             } else {
-                output = '<span class="status pending"><i class="fa fa-clock-o fa-lg"></i></span>';
+                output = '<span class="status pending"><i class="fa fa-clock-o fa-3x"></i></span>';
             }
             return $sce.trustAsHtml(output);
         };
