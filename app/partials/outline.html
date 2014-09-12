@@ -1,26 +1,50 @@
-<div ng-controller="OutlineCtrl" class="table-responsive col-sm-6">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>&nbsp;</th>
-                <th class="centered">#</th>
-                <th class="centered">عنوان المحاضرة</th>
-                <th class="centered">تاريخ المحاضرة (متوقع)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="lecture in lectures">
-                <td>
-                    <span ng-if="isNext(lecture)" class="status next">
-                        <i class="fa fa-bookmark fa-lg"></i>
-                    </span>
+<div ng-controller="OutlineCtrl" class="container">
+    <h1>خطة المساق</h1>
+    <div class="panel panel-info col-sm-10 col-sm-offset-1">
+        <div class="panel-body">
+            <p>
+                تشتمل خطة المساق على تقسيم المواضيع إلى ({{lectures.length}}) محاضرة، ترد في القائمة التالية بحسب ترتيبها الزمني. ويدل الرمز المجاور لكل محاضرة على حالة  عقدها أو عدمه.
+            </p>
+            <div class="col-sm-3">
+                <span class="status done">
+                    <i class="fa fa-check-circle fa-lg"></i>
+                    تم عقد المحاضرة
+                </span>
+            </div>
+            <div class="col-sm-4 col-sm-offset-1">
+                <span class="status next">
+                    <i class="fa fa-bookmark fa-lg"></i>
+                    سيتم عقد المحاضرة في اللقاء التالي
+                </span>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <span class="status pending">
+                    <i class="fa fa-clock-o fa-lg"></i>
+                    سيتم عقد المحاضرة لاحقا
+                </span>
+            </div>
+        </div>
+    </div>
+    <ul class="lectures" ng-repeat="lecture in lectures">
+        <li class="col-sm-6">
+            <span ng-if="isNext(lecture)" class="status next">
+                <i class="fa fa-bookmark fa-3x"></i>
+            </span>
 
-                    <div ng-bind-html="lecture.done | status"></div>
-                </td>
-                <td class="centered">{{lecture.id}}</td>
-                <td><a class="strong" href ng-href="#/lecture/{{lecture.id}}">{{lecture.title}}</a></td>
-                <td class="centered">{{lecture.date| date:'yyyy-MM-dd'}}</td>
-            </tr>
-        </tbody>
-    </table>
+            <div ng-if="!isNext(lecture)" ng-bind-html="lecture.done | status"></div>
+
+            <p>المحاضرة رقم ({{lecture.id}})</p>
+
+            <h4>{{lecture.title}}</h4>
+
+            <p>
+                <span ng-if="!isDone(lecture)">متوقع عقدها</span>
+                <span ng-if="isDone(lecture)">عقدت</span>
+                بتاريخ {{lecture.date| date:'dd-MM-yyyy'}}
+                <a href ng-href="#/lecture/{{lecture.id}}">
+                    <span class="read-more">(تفاصيل)</span>
+                </a>
+            </p>
+        </li>
+    </ul>
 </div>
