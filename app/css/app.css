@@ -18,10 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 body {
     padding-top: 60px;
     padding-bottom: 20px;
+    font-size: 14pt;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: JArab-Bold;
+}
+
+h1{
+    padding-bottom: 20px;
 }
 
 p {
