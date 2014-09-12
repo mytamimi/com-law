@@ -22,7 +22,7 @@ var svc = angular.module('clServices', ['ngResource']);
 
 svc.factory('Lecture', ['$resource',
     function($resource) {
-        return $resource('d/:lectureId.json', {}, {
-            query: {method: 'GET', params: {lectureId: 'lectures'}, isArray: true}
+        return $resource('d/lecture/:lectureId.json', {}, {
+            query: {method: 'GET', params: {lectureId: 'all'}, isArray: true}
         });
     }]);
