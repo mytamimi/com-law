@@ -5,4 +5,4 @@ Assembled for sharing information regarding the associated graduate course at He
 	
 The main access to the materials is available through the following site:
 
-	(Link should be added later).
+	http://mytamimi.github.io/com-law/app/
