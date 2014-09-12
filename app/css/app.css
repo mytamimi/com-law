@@ -20,28 +20,16 @@ body {
     padding-bottom: 20px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: JArab-Bold;
+}
+
+p {
+    font-size: 1.15em;
+}
+
 .centered {
     text-align: center;
-}
-
-.strong{
-    font-weight: bold;
-}
-
-span.status{
-    font-size: 1.25em;
-}
-
-span.status.done{
-    color: #67b168;
-}
-
-span.status.pending{
-    color: #7a43b6;
-}
-
-span.status.next{
-    color: #d2322d;
 }
 
 footer aside{
