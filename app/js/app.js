@@ -21,7 +21,8 @@
     var app = angular.module('comlaw', [
         'ngRoute',
         'ui.bootstrap',
-        'clControllers'
+        'clControllers',
+        'clFilters'
     ]);
 
     app.config(['$routeProvider', function ($routeProvider) {
