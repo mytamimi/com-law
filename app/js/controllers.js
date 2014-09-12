@@ -18,31 +18,39 @@
 
 'use strict';
 
-var ctrl = angular.module('clControllers', []);
+var ctrl = angular.module('clControllers', ['clServices']);
 
-ctrl.controller('MainCtrl', ['$scope', 'Lecture', function($scope, Lecture) {
-        $scope.lectures = Lecture.query(function() {
+ctrl.controller('MainCtrl', ['$scope', function ($scope) {
+    }]);
+
+ctrl.controller('OutlineCtrl', ['$scope', 'Lecture',
+    function ($scope, Lecture) {
+        $scope.lectures = Lecture.query(function () {
             var i = 0;
             while ($scope.lectures[i].done) {
                 i++;
             }
             $scope.i = i;
         });
-        
-        $scope.isNext = function(l){
+
+        $scope.isNext = function (l) {
             return (l === $scope.lectures[$scope.i]) && (!l.done);
         };
-        
-        $scope.isLater = function(l){
+
+        $scope.isLater = function (l) {
             return (l !== $scope.lectures[$scope.i]) && (!l.done);
         };
-        
-        $scope.isDone = function(l){
+
+        $scope.isDone = function (l) {
             return l.done;
         };
     }]);
 
 ctrl.controller('LectureCtrl', ['$scope', '$routeParams', 'Lecture',
-    function($scope, $routeParams, Lecture) {
+    function ($scope, $routeParams, Lecture) {
         $scope.lecture = Lecture.get({lectureId: $routeParams.lectureId});
+    }]);
+
+ctrl.controller('LawCtrl', ['$scope',
+    function ($scope) {
     }]);
