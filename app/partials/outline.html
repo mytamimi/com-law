@@ -1,4 +1,4 @@
-<div class="table-responsive col-sm-6">
+<div ng-controller="OutlineCtrl" class="table-responsive col-sm-6">
     <table class="table table-striped">
         <thead>
             <tr>
@@ -15,13 +15,7 @@
                         <i class="fa fa-bookmark fa-lg"></i>
                     </span>
 
-                    <span ng-if="isDone(lecture)" class="status done">
-                        <i class="fa fa-check-circle fa-lg"></i>
-                    </span>
-
-                    <span ng-if="isLater(lecture)" class="status pending">
-                        <i class="fa fa-clock-o fa-lg"></i>
-                    </span>
+                    <div ng-bind-html="lecture.done | status"></div>
                 </td>
                 <td class="centered">{{lecture.id}}</td>
                 <td><a class="strong" href ng-href="#/lecture/{{lecture.id}}">{{lecture.title}}</a></td>
