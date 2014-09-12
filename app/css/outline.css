@@ -22,7 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 .lectures li {
     padding-top: 10px;
     padding-bottom: 10px;
-    /*border-style: dashed;*/
     overflow: hidden;
 }
 
@@ -40,4 +39,8 @@ span.pending{
 
 span.next{
     color: #d2322d;
+}
+
+.panel-body > p, .panel-body > div{
+    font-size: 14pt;
 }
