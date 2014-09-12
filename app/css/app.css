@@ -44,3 +44,7 @@ footer aside{
     padding: 30px 10px;
     text-align: left;
 }
+
+.fb:hover{
+    color: #3b5998;
+}
