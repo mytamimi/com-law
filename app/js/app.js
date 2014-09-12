@@ -26,25 +26,26 @@
         'clFilters'
     ]);
 
-    app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-            $locationProvider.html5Mode(true);
+    app.config(['$routeProvider', function ($routeProvider) {
+            var site_prefix = '/com-law/app';
+
             $routeProvider.
-                    when('/', {
+                    when('/com-law/app' + '/', {
                         templateUrl: 'partials/main.html',
                         controller: 'MainCtrl'
                     }).
-                    when('/outline', {
+                    when('/com-law/app' + '/outline', {
                         templateUrl: 'partials/outline.html',
                         controller: 'OutlineCtrl'
                     }).
-                    when('/law', {
+                    when('/com-law/app' + '/law', {
                         templateUrl: 'partials/law.html',
                         controller: 'LawCtrl'
                     }).
-                    when('/lecture/:lectureId', {
+                    when('/com-law/app' + '/lecture/:lectureId', {
                         templateUrl: 'partials/lecture.html',
                         controller: 'LectureCtrl'
                     }).
-                    otherwise({redirectTo: '/'});
+                    otherwise({redirectTo: '/com-law/app' + '/'});
         }]);
 })();
