@@ -17,23 +17,31 @@
 
 
 'use strict';
-(function() {
+(function () {
     var app = angular.module('comlaw', [
         'ngRoute',
         'ui.bootstrap',
-        'clControllers',
-        'clServices'
+        'clControllers'
     ]);
 
-    app.config(['$routeProvider', function($routeProvider) {
+    app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.
                     when('/', {
                         templateUrl: 'partials/main.html',
                         controller: 'MainCtrl'
                     }).
+                    when('/outline', {
+                        templateUrl: 'partials/outline.html',
+                        controller: 'OutlineCtrl'
+                    }).
+                    when('/law', {
+                        templateUrl: 'partials/law.html',
+                        controller: 'LawCtrl'
+                    }).
                     when('/lecture/:lectureId', {
-                        templateUrl: 'partials/lecture-details.html',
+                        templateUrl: 'partials/lecture.html',
                         controller: 'LectureCtrl'
-                    }).otherwise({redirectTo: '/'});
+                    }).
+                    otherwise({redirectTo: '/'});
         }]);
 })();
