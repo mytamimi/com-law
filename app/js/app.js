@@ -27,25 +27,23 @@
     ]);
 
     app.config(['$routeProvider', function ($routeProvider) {
-            var site_prefix = '/com-law/app';
-
             $routeProvider.
-                    when('/com-law/app' + '/', {
+                    when('/', {
                         templateUrl: 'partials/main.html',
                         controller: 'MainCtrl'
                     }).
-                    when('/com-law/app' + '/outline', {
+                    when('/outline', {
                         templateUrl: 'partials/outline.html',
                         controller: 'OutlineCtrl'
                     }).
-                    when('/com-law/app' + '/law', {
+                    when('/law', {
                         templateUrl: 'partials/law.html',
                         controller: 'LawCtrl'
                     }).
-                    when('/com-law/app' + '/lecture/:lectureId', {
+                    when('/lecture/:lectureId', {
                         templateUrl: 'partials/lecture.html',
                         controller: 'LectureCtrl'
                     }).
-                    otherwise({redirectTo: '/com-law/app' + '/'});
+                    otherwise({redirectTo: '/'});
         }]);
 })();
