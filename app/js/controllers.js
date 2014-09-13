@@ -20,7 +20,14 @@
 
 var ctrl = angular.module('clControllers', ['clServices']);
 
-ctrl.controller('MainCtrl', ['$scope', function ($scope) {
+ctrl.controller('MainCtrl', ['$scope', 'Events', function ($scope, Events) {
+        Events.query(function (events) {
+            $scope.events = events;
+            $scope.eventOrder = 'date';
+            $scope.inFuture = function (e) {
+                return (new Date(e.date) > new Date());
+            };
+        });
     }]);
 
 ctrl.controller('OutlineCtrl', ['$scope', 'Lecture',

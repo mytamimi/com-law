@@ -1,3 +1,23 @@
-<div ng-controller="MainCtrl">
-
+<div class="container" ng-controller="MainCtrl">
+    <div class="jumbotron">
+        <h1>قانون الأعمال</h1>
+        <h3>الفصل الأول، العام الأكاديمي 2015/2014.</h3>
+        <h4>صفحة إلكترونية لمصادر مرتبطة بمساق  رقم (63720)، ضمن برنامج الماجستير في إدارة الأعمال، كلية الدراسات العليا، جامعة الخليل.</h4>
+    </div>
+    <div class="col-sm-3">
+        <h3>خطة المساق</h3>
+        <p>تشتمل الخطة الدراسية التي أصدرها مدرس المساق (د. راتب الجعبري) على توزيع المادة العلمية على لقاءات، ترد تفاصيلها ضمن هذه الصفحة.
+            <a href="#/outline">(المزيد)</a>
+        </p>
+    </div>
+    <div class="col-sm-3 col-sm-offset-1">
+        <h3>مواعيد قادمة</h3>
+        <div ng-repeat="event in events| orderBy: eventOrder">
+            <div class="event" ng-if="inFuture(event)">
+                <i class="fa fa-calendar"></i>
+                <span>{{event.date| date:'yyyy-MM-dd'}}</span>
+                <h5>{{event.title}}</h5>
+            </div>
+        </div>
+    </div>
 </div>

@@ -64,3 +64,8 @@ tab > div {
     border-style: dotted;
     border-width: 1;
 }
+
+.event{
+    border-right-style: solid;
+    padding-right: 10px;
+}
