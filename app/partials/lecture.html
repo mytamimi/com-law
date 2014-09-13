@@ -11,8 +11,9 @@
         <tab ng-repeat="part in lecture.parts">
             <tab-heading>قسم ({{$index + 1}})</tab-heading>
             <h4 class="detail-title">{{part.topics.title}}</h4>
-            <div class="container col-sm-5">
-                <div ng-if="part.topics.subtopics.length">
+
+            <div ng-if="part.topics.subtopics.length">
+                <div class="container col-sm-5">
                     <h5>المواضيع التفصيلية</h5>
                     <ol class="major-list">
                         <li ng-repeat="subtopic in part.topics.subtopics">
@@ -24,7 +25,8 @@
                     </ol>
                 </div>
             </div>
-            <div class="container col-sm-5 col-sm-offset-1" ng-if="part.references.length">
+
+            <div class="container col-sm-5" ng-if="part.references.length">
                 <h5 class="detail-title">المراجع</h5>
                 <ol class="major-list">
                     <li ng-repeat="ref in part.references">
@@ -35,6 +37,7 @@
                     </li>
                 </ol>
             </div>
+
         </tab>
     </tabset>
 </div>
