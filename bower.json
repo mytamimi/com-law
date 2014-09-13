@@ -1,7 +1,7 @@
 {
   "name": "com-law",
   "description": "Information site for commercial laws course.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/mytamimi/com-law",
   "license": "MIT",
   "private": true,
