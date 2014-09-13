@@ -3,6 +3,6 @@ com-law
 
 Assembled for sharing information regarding the associated graduate course at Hebron University.
 	
-The main access to the materials is available through the following site:
+The main access to the materials is available through [the following site](http://mytamimi.github.io/com-law/app/):
 
-	(Link should be added later).
+	http://mytamimi.github.io/com-law/app/
