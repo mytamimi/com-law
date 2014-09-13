@@ -15,52 +15,19 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-body {
-    padding-top: 60px;
-    padding-bottom: 20px;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+ol {
+    font-size: 12pt;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: JArab-Bold;
+.detail-title{
+    padding-bottom: 15px;
 }
 
-h1, h2{
-    padding-bottom: 20px;
+.minor-list {
+    list-style-type: square;
+    font-size: 12pt;
 }
 
-h3, h4, h5, h6 {
-    padding-bottom: 5px;
-}
-
-p {
-    font-size: 1.15em;
-}
-
-.centered {
-    text-align: center;
-}
-
-footer{
-    font-size: 10pt;
-}
-
-footer aside{
-    padding: 30px 10px;
-    text-align: left;
-}
-
-.fb {
-    color: #777;
-}
-
-.fb:hover{
-    color: #3b5998;
-}
-
-tab > div {
-    border-style: dotted;
-    border-width: 1;
+.lecture-head{
+    padding-bottom: 30px;
 }

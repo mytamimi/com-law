@@ -48,6 +48,9 @@ ctrl.controller('OutlineCtrl', ['$scope', 'Lecture',
 
 ctrl.controller('LectureCtrl', ['$scope', '$routeParams', 'Lecture',
     function ($scope, $routeParams, Lecture) {
+        Lecture.query(function (list) {
+            $scope.pending = !(list[parseInt($routeParams.lectureId) - 1].done);
+        });
         $scope.lecture = Lecture.get({lectureId: $routeParams.lectureId});
     }]);
 
