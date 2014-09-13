@@ -12,12 +12,13 @@
     </div>
     <div class="col-sm-3 col-sm-offset-1">
         <h3>مواعيد قادمة</h3>
-        <div ng-repeat="event in events| orderBy: eventOrder">
+        <div ng-if="events.length" ng-repeat="event in events| orderBy: eventOrder">
             <div class="event" ng-if="inFuture(event)">
                 <i class="fa fa-calendar"></i>
                 <span>{{event.date| date:'yyyy-MM-dd'}}</span>
                 <h5>{{event.title}}</h5>
             </div>
         </div>
+        <h5 ng-if="!events.length">غير متوفرة حاليا.</h5>
     </div>
 </div>
