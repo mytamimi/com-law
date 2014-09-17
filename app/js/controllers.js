@@ -21,12 +21,23 @@
 var ctrl = angular.module('clControllers', ['clServices']);
 
 ctrl.controller('MainCtrl', ['$scope', 'Events', function ($scope, Events) {
-        Events.query(function (events) {
-            $scope.events = events;
+        var events = Events.query(function () {
             $scope.eventOrder = 'date';
             $scope.inFuture = function (e) {
                 return (new Date(e.date) > new Date());
             };
+
+            var i = 0;
+            while (i < events.length) {
+                if (!$scope.inFuture(events[i])) {
+                    events.splice(i, 1);
+                }
+                else {
+                    i++;
+                }
+            }
+
+            $scope.events = events;
         });
     }]);
 
