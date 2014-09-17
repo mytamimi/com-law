@@ -5,7 +5,22 @@
             <span ng-if="pending">(متوقع)</span>: {{lecture.date| date:'dd-MM-yyyy'}}
         </h4>
         <h4>عدد أقسام المحاضرة: {{lecture.parts.length}}</h4>
+
+        <div ng-if="lecture.files.length" class="panel panel-info">
+            <p class="panel-body"><b>تنزيل: </b>
+                <span ng-repeat="file in lecture.files">
+                    <span ng-if="!$last">
+                        <a href="{{file.url}}">{{file.caption}}</a>،
+                    </span>
+                    <span ng-if="$last">
+                        <a href="{{file.url}}">{{file.caption}}</a>.
+                    </span>
+                </span>
+            </p>
+        </div>
     </div>
+
+
 
     <tabset class="col-sm-11">
         <tab ng-repeat="part in lecture.parts">
@@ -37,7 +52,6 @@
                     </li>
                 </ol>
             </div>
-
         </tab>
     </tabset>
 </div>
