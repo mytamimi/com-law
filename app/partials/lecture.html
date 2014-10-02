@@ -10,10 +10,10 @@
             <p class="panel-body"><b>تنزيل: </b>
                 <span ng-repeat="file in lecture.files">
                     <span ng-if="!$last">
-                        <a href="{{file.url}}">{{file.caption}}</a>،
+                        <a href="file/{{file.url}}">{{file.caption}}</a>،
                     </span>
                     <span ng-if="$last">
-                        <a href="{{file.url}}">{{file.caption}}</a>.
+                        <a href="file/{{file.url}}">{{file.caption}}</a>.
                     </span>
                 </span>
             </p>
