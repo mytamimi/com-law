@@ -33,3 +33,9 @@ svc.factory('Events', ['$resource',
             query: {method: 'GET', isArray: true}
         });
     }]);
+
+svc.factory('Exercises', ['$resource', function ($resource) {
+        return $resource('d/exercise/:categoryId.json', {}, {
+            query: {method: 'GET', params: {categoryId: 'all'}, isArray: true}
+        });
+    }]);
