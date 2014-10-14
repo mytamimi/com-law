@@ -36,13 +36,17 @@
                         templateUrl: 'partials/outline.html',
                         controller: 'OutlineCtrl'
                     }).
-                    when('/law', {
-                        templateUrl: 'partials/law.html',
-                        controller: 'LawCtrl'
+                    when('/exercise', {
+                        templateUrl: 'partials/exercisesList.html',
+                        controller: 'ExercisesListCtrl'
                     }).
                     when('/lecture/:lectureId', {
                         templateUrl: 'partials/lecture.html',
                         controller: 'LectureCtrl'
+                    }).
+                    when('/exercise/:categoryId', {
+                        templateUrl: 'partials/exercise.html',
+                        controller: 'ExerciseCtrl'
                     }).
                     otherwise({redirectTo: '/'});
         }]);

@@ -72,6 +72,12 @@ ctrl.controller('LectureCtrl', ['$scope', '$routeParams', 'Lecture',
         $scope.lecture = Lecture.get({lectureId: $routeParams.lectureId});
     }]);
 
-ctrl.controller('LawCtrl', ['$scope',
-    function ($scope) {
+ctrl.controller('ExercisesListCtrl', ['$scope', 'Exercises',
+    function ($scope, Exercises) {
+        $scope.categories = Exercises.query();
     }]);
+
+ctrl.controller('ExerciseCtrl', ['$scope', '$routeParams', 'Exercises'],
+        function ($scope, $routeParams, Exercises) {
+            $scope.questions = Exercises.get({'categoryId': $routeParams.categoryId});
+        });
