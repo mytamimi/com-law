@@ -36,10 +36,6 @@
                         templateUrl: 'partials/outline.html',
                         controller: 'OutlineCtrl'
                     }).
-                    when('/law', {
-                        templateUrl: 'partials/law.html',
-                        controller: 'LawCtrl'
-                    }).
                     when('/lecture/:lectureId', {
                         templateUrl: 'partials/lecture.html',
                         controller: 'LectureCtrl'
