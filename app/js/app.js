@@ -44,6 +44,14 @@
                         templateUrl: 'partials/lecture.html',
                         controller: 'LectureCtrl'
                     }).
+                    when('/exercise', {
+                        tamplateUrl: 'partials/exercisesList.html',
+                        controller: 'ExercisesListCtrl'
+                    }).
+                    when('/exercise/:categoryId', {
+                        templateUrl: 'partials/exercise.html',
+                        controller: 'ExerciseCtrl'
+                    }).
                     otherwise({redirectTo: '/'});
         }]);
 })();
