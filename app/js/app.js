@@ -22,6 +22,7 @@
     var app = angular.module('comlaw', [
         'ngRoute',
         'ui.bootstrap',
+        'ui.bootstrap.transition',
         'clControllers',
         'clFilters'
     ]);
@@ -40,13 +41,13 @@
                         templateUrl: 'partials/lecture.html',
                         controller: 'LectureCtrl'
                     }).
-                    when('/exercise', {
-                        tamplateUrl: 'partials/exercisesList.html',
-                        controller: 'ExercisesListCtrl'
+                    when('/exercises', {
+                        templateUrl: 'partials/exercises.html',
+                        controller: 'ExerciseListCtrl'
                     }).
                     when('/exercise/:categoryId', {
-                        templateUrl: 'partials/exercise.html',
-                        controller: 'ExerciseCtrl'
+                        templateUrl: 'partials/questions.html',
+                        controller: 'QuestionsCtrl'
                     }).
                     otherwise({redirectTo: '/'});
         }]);

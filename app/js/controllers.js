@@ -72,12 +72,24 @@ ctrl.controller('LectureCtrl', ['$scope', '$routeParams', 'Lecture',
         $scope.lecture = Lecture.get({lectureId: $routeParams.lectureId});
     }]);
 
-ctrl.controller('ExercisesListCtrl', ['$scope', 'Exercise',
-    function ($scope, Exercise) {
-        $scope.categories = Exercise.query();
+ctrl.controller('ExerciseListCtrl', ['$scope', 'Exercises',
+    function ($scope, Exercises) {
+        $scope.categories = Exercises.query();
     }]);
 
-ctrl.controller('ExerciseCtrl', ['$scope', '$routeParams', 'Exercise',
-    function ($scope, $routeParams, Exercise) {
-        $scope.questions = Exercise.get({categoryId: $routeParams.categoryId});
+ctrl.controller('QuestionsCtrl', ['$scope', '$routeParams', 'Exercises',
+    function ($scope, $routeParams, Exercises) {
+        var titles = Exercises.query(function () {
+            var i = parseInt($routeParams.categoryId) - 1;
+            $scope.title = titles[i];
+        });
+        $scope.sections = Exercises.query({categoryId: $routeParams.categoryId});
+
+        $scope.isMulti = function () {
+            return ($scope.sections.length > 1);
+        };
+
+        $scope.isOne = function () {
+            return ($scope.sections.length === 1);
+        };
     }]);

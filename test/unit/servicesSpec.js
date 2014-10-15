@@ -13,4 +13,8 @@ describe('service', function () {
     it('should check the existence of Events factory', inject(function (Events) {
         expect(Events).toBeDefined();
     }));
+    
+    it('should check the existence of Events factory', inject(function (Events) {
+        expect(Exercises).toBeDefined();
+    }));
 });
