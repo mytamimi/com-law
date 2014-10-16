@@ -1,0 +1,14 @@
+<div class="container" ng-controller="QuestionsCtrl">
+    <h1>أسئلة عملية</h1>
+    <h3>{{ title}}</h3>
+    <hr/>
+    <h4>عدد أسئلة هذا الموضوع: {{itemsCount}}</h4>
+
+    <ul class="data" ng-repeat="question in shownContent">
+        <li><p>{{ question}}</p></li>
+    </ul>
+    <div class="col-sm-4 col-sm-offset-4" >
+        <pagination total-items="itemsCount" items-per-page="itemsPerPage" previous-text="{{capPrev}}" next-text="{{capNext}}" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+    </div>
+
+</div>
