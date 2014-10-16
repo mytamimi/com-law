@@ -83,13 +83,33 @@ ctrl.controller('QuestionsCtrl', ['$scope', '$routeParams', 'Exercises',
             var i = parseInt($routeParams.categoryId) - 1;
             $scope.title = titles[i];
         });
-        $scope.sections = Exercises.query({categoryId: $routeParams.categoryId});
 
-        $scope.isMulti = function () {
-            return ($scope.sections.length > 1);
+        $scope.itemsPerPage = 5;
+        $scope.currentPage = 1;
+
+        $scope.capPrev = 'الصفحة السابقة';
+        $scope.capNext = 'الصفحة التالية';
+
+        var switchContent = function () {
+            var start = ($scope.currentPage - 1) * $scope.itemsPerPage;
+            var end = start + $scope.itemsPerPage;
+            $scope.shownContent = $scope.sections[0].questions.slice(start, end);
         };
 
-        $scope.isOne = function () {
-            return ($scope.sections.length === 1);
+        var updatePageInfo = function () {
+            $scope.itemsCount = $scope.sections[0].questions.length;
+            switchContent();
+        };
+
+        $scope.sections = Exercises.query({categoryId: $routeParams.categoryId}, function () {
+            updatePageInfo();
+        });
+
+        $scope.pageChanged = function () {
+            switchContent();
+        };
+
+        $scope.showPages = function () {
+            return $scope.itemsCount > $scope.itemsPerPage;
         };
     }]);
