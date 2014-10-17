@@ -7,7 +7,7 @@
     <ul class="data" ng-repeat="question in shownContent">
         <li><p>{{ question}}</p></li>
     </ul>
-    <div class="col-sm-4 col-sm-offset-4" >
+    <div class="col-sm-offset-4" >
         <pagination total-items="itemsCount" items-per-page="itemsPerPage" previous-text="{{capPrev}}" next-text="{{capNext}}" ng-model="currentPage" ng-change="pageChanged()"></pagination>
     </div>
 
