@@ -27,6 +27,10 @@ ctrl.controller('MainCtrl', ['$scope', 'Events', function ($scope, Events) {
                 return (new Date(e.date) > new Date());
             };
 
+            $scope.isHPEvent = function (idx) {
+                return events[idx].important ? "important" : "";
+            };
+
             var i = 0;
             while (i < events.length) {
                 if (!$scope.inFuture(events[i])) {
