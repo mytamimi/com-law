@@ -1,18 +1,32 @@
 [
     {
         "title": "المحاضرة الأولى",
-        "date": "2014-09-16"
+        "date": "2014-09-16",
+        "important": false
     },
     {
         "title": "المحاضرة الثانية",
-        "date": "2014-09-30"
+        "date": "2014-09-30",
+        "important": false
     },
     {
         "title": "المحاضرة الثالثة",
-        "date": "2014-10-14"
+        "date": "2014-10-14",
+        "important": false
     },
     {
         "title": "المحاضرة الرابعة",
-        "date": "2014-10-21"
+        "date": "2014-10-21",
+        "important": false
+    },
+    {
+        "title": "المحاضرة الخامسة",
+        "date": "2014-10-28",
+        "important": false
+    },
+    {
+        "title": "الإمتحان النصفي",
+        "date": "2014-11-18",
+        "important": true
     }
 ]
