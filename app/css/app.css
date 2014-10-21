@@ -69,3 +69,7 @@ tab > div {
     border-right-style: solid;
     padding-right: 10px;
 }
+
+.event > .important{
+    color: red;
+}
