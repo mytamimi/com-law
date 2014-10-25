@@ -1,6 +1,16 @@
 {
     "order": 3,
     "date": "2014-10-14",
+    "files": [
+        {
+            "caption": "الجزء 1",
+            "url": "3.1.pptx"
+        },
+        {
+            "caption": "الجزء 2",
+            "url": "3.2.pptx"
+        }
+    ],
     "parts": [
         {
             "topics": {
