@@ -1,6 +1,12 @@
 {
     "order": 4,
     "date": "2014-10-21",
+    "files": [
+        {
+            "caption": "كامل مادة العرض",
+            "url": "4.pptx"
+        }
+    ],
     "parts": [
         {
             "topics": {
