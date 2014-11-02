@@ -1,6 +1,12 @@
 {
     "order": 6,
     "date": "2014-11-04",
+    "files": [
+        {
+            "caption": "الجزء الثاني",
+            "url": "6.2.pdf"
+        }
+    ],
     "parts": [
         {
             "topics": {
