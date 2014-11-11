@@ -4,25 +4,44 @@
         <h3>الفصل الأول، العام الأكاديمي 2015/2014.</h3>
         <h4>صفحة إلكترونية لمصادر مرتبطة بمساق  رقم (63720)، ضمن برنامج الماجستير في إدارة الأعمال، كلية الدراسات العليا، جامعة الخليل.</h4>
     </div>
-    <div class="col-sm-3">
-        <h3>خطة المساق</h3>
-        <p>تشتمل الخطة الدراسية التي أصدرها مدرس المساق (د. راتب الجعبري) على توزيع المادة العلمية على لقاءات، ترد تفاصيلها ضمن هذه الصفحة.
-            <a ng-href="#/outline">(تفاصيل)</a>
-        </p>
-    </div>
-    <div class="col-sm-3 col-sm-offset-1">
-        <h3>مواعيد قادمة</h3>
-        <div ng-if="events.length" ng-repeat="event in events| orderBy: eventOrder">
-            <div class="event" ng-if="inFuture(event)">
-                <span class="{{ isHPEvent($index) }}"><i class="fa fa-calendar"></i></span>
-                <span class="{{ isHPEvent($index) }}">{{event.date| date:'yyyy-MM-dd'}}</span>
-                <h5 class="{{ isHPEvent($index) }}">{{event.title}}</h5>
-            </div>
+
+    <div class="container">
+        <div class="col-sm-3">
+            <h3>خطة المساق</h3>
+            <p>تشتمل الخطة الدراسية التي أصدرها مدرس المساق (د. راتب الجعبري) على توزيع المادة العلمية على لقاءات، ترد تفاصيلها ضمن هذه الصفحة.
+                <a ng-href="#/outline">(تفاصيل)</a>
+            </p>
         </div>
-        <h5 ng-if="!events.length">لا توجد حاليا أية مواعيد.</h5>
+
+        <div class="col-sm-3 col-sm-offset-1">
+            <h3>مواعيد قادمة</h3>
+            <div ng-if="events.length" ng-repeat="event in events| orderBy: eventOrder">
+                <div class="event" ng-if="inFuture(event)">
+                    <span class="{{ isHPEvent($index)}}"><i class="fa fa-calendar"></i></span>
+                    <span class="{{ isHPEvent($index)}}">{{event.date| date:'yyyy-MM-dd'}}</span>
+                    <h5 class="{{ isHPEvent($index)}}">{{event.title}}</h5>
+                </div>
+            </div>
+            <h5 ng-if="!events.length">لا توجد حاليا أية مواعيد.</h5>
+        </div>
+
+        <div class="col-sm-3 col-sm-offset-1">
+            <h3>أسئلة عملية</h3>
+            <p>تتوفر الأسئلة المرتبطة بالمواضيع التي تم شرحها في هذا القسم. <a ng-href="#/exercises">(تفاصيل)</a></p>
+        </div>
     </div>
-    <div class="col-sm-3 col-sm-offset-1">
-        <h3>أسئلة عملية</h3>
-        <p>تتوفر الأسئلة المرتبطة بالمواضيع التي تم شرحها في هذا القسم. <a ng-href="#/exercises">(تفاصيل)</a></p>
+
+    <div class="container">
+        <div class="col-sm-3">
+            <h3>متفرقات</h3>
+            <p>
+                <span style="color: red">
+                    <i class="fa fa-2x fa-file-pdf-o"></i>
+                </span>
+                <a ng-href="http://bit.ly/1xuRCtf" target="_blank">
+                    الحماية الجزائية للشيك
+                </a>
+            </p>
+        </div>
     </div>
 </div>
