@@ -1,6 +1,12 @@
 {
     "order": 7,
     "date": "2014-11-11",
+     "files": [
+        {
+            "caption": "كامل ملف العرض",
+            "url": "7.ppt"
+        }
+    ],
     "parts": [
         {
             "topics": {
