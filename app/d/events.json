@@ -48,5 +48,15 @@
         "title": "المحاضرة التاسعة",
         "date": "2014-12-02",
         "important": false
+    },
+    {
+        "title": "المحاضرة العاشرة",
+        "date": "2014-12-09",
+        "important": false
+    },
+    {
+        "title": "المحاضرة الحادية عشرة",
+        "date": "2014-12-16",
+        "important": false
     }
 ]
